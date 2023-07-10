@@ -1,0 +1,80 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #2B2A4C;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+main{
+    margin: 0px;
+    padding: 0px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.caption{
+    text-align: center;
+    margin-top: -230px;
+    /* margin-right: 120px; */
+}
+
+h1.name{
+    color: #ffffff;
+}
+
+p.lead{
+    margin-top: -20px;
+    color: #B31312;
+}
+
+.love{
+    width: 120px;
+    height: 120px;
+    background-color: #B31312;
+    position: relative;
+    transform: rotate(-45deg);
+    box-shadow: -30px 30px 140px #B31312;
+    animation: love 0.6s linear infinite;
+}
+
+@keyframes love{
+    0%{
+        transform: rotate(-45deg) scale(1.07);
+    }
+    80%{
+        transform: rotate(-45deg) scale(1.0);
+    }
+    100%{
+        transform: rotate(-45deg) scale(0.8);
+    }
+}
+
+.love::before{
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background-color: #B31312;
+    top: -50%;
+    border-radius: 70px;
+    box-shadow: -30px -30px 140px #B31312;
+}
+
+.love::after{
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background-color: #B31312;
+    right: -50%;
+    border-radius: 70px;
+    box-shadow: 30px 30px 140px #B31312;
+}
+
+@media (max-width: 480px) {
+    .caption{margin-top: -320px;}
+}
